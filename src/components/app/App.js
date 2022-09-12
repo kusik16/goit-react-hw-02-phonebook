@@ -5,6 +5,7 @@ import ContactForm from '../contactForm/ContactForm';
 import Filter from '../filter/Filter';
 import ContactList from '../contactList/ContactList';
 
+import app from './App.module.css';
 class App extends Component {
   constructor() {
     super();
@@ -77,9 +78,9 @@ class App extends Component {
 
     return (
       <div>
-        <h1 className="title">Phonebook</h1>
+        <h1 className={app.title}>Phonebook</h1>
         <ContactForm onAddContact={this.onAddContact} />
-        <h2 className="title">Contacts</h2>
+        <h2 className={app.title}>Contacts</h2>
         <Filter onFilter={this.onFilter} />
         <ContactList
           filteredContacts={filteredContacts}
